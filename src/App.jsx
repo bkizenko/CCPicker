@@ -1,33 +1,34 @@
 import { useState } from 'react'
+import { Link } from 'react-reacter-dom'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [creditScoreRange, setCreditScoreRange] = useState('')
+
+  const handleChange = (e) => {
+    setCreditScoreRange(e.target.value)
+  }
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <div> 
+        something cool
+        <h1> Credit Card Picker </h1>
+        <div> 
+          <p> What is your credit score? </p>
+          < select name = "creditScoreRange" id = "creditScoreRange" onChange={handleChange}>
+            <option value="Excellent, 800-850"> 800-850 </option>
+            <option value="Very Good, 740-799"> 740-799</option>
+            <option value="Good, 670-739"> 670-739 </option>
+            <option value="Fair, 580-669">580 to 669 </option>
+            <option value="Poor, 300-579">300-579 </option>
+          </select>
+        </div>
+        < p> The selected credit score range is: {creditScoreRange}</p>
+        < Link to ="/results">Results</Link>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
   )
 }
