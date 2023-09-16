@@ -14,7 +14,7 @@ function App() {
     <>
       <div> 
         something cool
-        <h1> Credit Card Picker </h1>
+        <h1> Credit Card  </h1>
         <div> 
           <p> What is your credit score? </p>
           < select name = "creditScoreRange" id = "creditScoreRange" onChange={handleChange}>
