@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import Navbar from "./Navbar"
 
 function App() {
   const [creditScoreRange, setCreditScoreRange] = useState('')
@@ -12,9 +11,10 @@ function App() {
 
   return (
     <>
+      <Navbar />
       <div> 
         something cool
-        <h1> Credit Card  </h1>
+        <h1> Credit Card Picker </h1>
         <div> 
           <p> What is your credit score? </p>
           < select name = "creditScoreRange" id = "creditScoreRange" onChange={handleChange}>
