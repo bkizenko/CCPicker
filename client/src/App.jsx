@@ -9,8 +9,7 @@ function App() {
 
   return (
     <>
-      <div> 
-        something cool
+      
         <h1> Credit Card Picker </h1>
         <div> 
           <p> What is your credit score? </p>
@@ -22,10 +21,9 @@ function App() {
             <option value="Poor, 300-579"> 300-579 </option>
           </select>
         </div>
-        <div> 
+        <div className ="ccscore"> 
           Your credit score is: {creditScoreRange}
         </div>
-      </div>
     </>
   )
 }

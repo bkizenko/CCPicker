@@ -34,7 +34,30 @@ body {
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+  position: absolute;
+  top: 15%;
+  left: 15%;
 }
+
+p {
+  position: absolute;
+  top: 30%;
+  left: 30%;
+}
+
+select {
+  position: absolute;
+  top: 35%;
+  left: 35%;
+  margin-top: 10px;
+}
+
+.ccscore {
+  position: absolute;
+  top: 45%;
+  left: 30%;
+}
+
 
 button {
   border-radius: 8px;
