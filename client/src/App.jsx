@@ -1,31 +1,48 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 
 function App() {
-  const [creditScoreRange, setCreditScoreRange] = useState('')
+  const [creditScore, setCreditScore] = useState('');
+  const [income, setIncome] = useState('');
 
   const handleChange = (e) => {
-    setCreditScoreRange(e.target.value)
-  }
+    setCreditScore(e.target.value);
+  };
 
+  const handleChange2 = (e) => {
+    if (income != ' ') {
+      setIncome(e.target.value);
+    }
+  };
   return (
     <>
-      
-        <h1> Credit Card Picker </h1>
-        <div> 
-          <p> What is your credit score? </p>
-          < select name = "creditScoreRange" id = "creditScoreRange" onChange={handleChange}>
-            <option value="Excellent, 800-850"> 800-850 </option>
-            <option value="Very Good, 740-799"> 740-799 </option>
-            <option value="Good, 670-739"> 670-739 </option>
-            <option value="Fair, 580-669"> 580-669 </option>
-            <option value="Poor, 300-579"> 300-579 </option>
-          </select>
-        </div>
-        <div className ="ccscore"> 
-          Your credit score is: {creditScoreRange}
-        </div>
+      <h1> Credit Card Picker </h1>
+      <div>
+        <p className="cscoreq"> What is your credit score? </p>
+        <input
+          type="text"
+          name="creditScore"
+          id="creditScore"
+          onChange={handleChange}
+          value={creditScore}
+        />
+        <p> What is your income? </p>
+        < input 
+          type="text"
+          name="income"
+          id="income"
+          onChange={handleChange2}
+          value={income}
+
+        /> 
+      </div>
+      <div className="cscorea">
+        Your credit score is: {creditScore}
+      </div>
+      <div className="incomeAnswer">
+        Your income  is: {income}
+      </div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

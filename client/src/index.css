@@ -23,6 +23,7 @@ a:hover {
   color: #535bf2;
 }
 
+
 body {
   margin: 0;
   display: flex;
@@ -39,7 +40,7 @@ h1 {
   left: 15%;
 }
 
-p {
+.cscoreq {
   position: absolute;
   top: 30%;
   left: 30%;
@@ -52,11 +53,12 @@ select {
   margin-top: 10px;
 }
 
-.ccscore {
+.cscorea {
   position: absolute;
   top: 45%;
   left: 30%;
 }
+
 
 
 button {
@@ -89,4 +91,16 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+.aincomeq {
+  position: absolute;
+  top: 70%;
+  left: 70%;
+}
+
+.aincomea {
+  position: absolute;
+  top: 80%;
+  left: 70%;
 }
