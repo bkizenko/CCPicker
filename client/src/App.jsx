@@ -38,22 +38,24 @@ function App() {
       <div>
         <p className="cscoreq"> What is your credit score? </p>
         <input
+          className = "cscoretextbox"
           type="text"
           name="creditScore"
           id="creditScore"
           onChange={handleChange}
           value={creditScore}
         />
-        < button onClick = {saveCreditScore}> Save </button>
-        <p> What is your income? </p>
-        < input 
+        < button className = "cscore-btn" onClick = {saveCreditScore}> Save </button>
+        <p className="incomeq"> What is your income? </p>
+        < input
+          className = 'incometextbox' 
           type="text"
           name="income"
           id="income"
           onChange={handleChange2}
           value={income}
         /> 
-        < button onClick = {saveIncome}> Save </button>
+        < button className = "income-btn" onClick = {saveIncome}> Save </button>
       </div>
       <div className="cscorea">
         Your credit score is: {creditScore}
