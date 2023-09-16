@@ -1,6 +1,4 @@
 import React, { useState } from 'react'
-import './App.css'
-import Navbar from "./Navbar"
 
 function App() {
   const [creditScoreRange, setCreditScoreRange] = useState('')
@@ -11,7 +9,6 @@ function App() {
 
   return (
     <>
-      <Navbar />
       <div> 
         something cool
         <h1> Credit Card Picker </h1>
@@ -24,6 +21,9 @@ function App() {
             <option value="Fair, 580-669"> 580-669 </option>
             <option value="Poor, 300-579"> 300-579 </option>
           </select>
+        </div>
+        <div> 
+          Your credit score is: {creditScoreRange}
         </div>
       </div>
     </>
