@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { pythonify } from "pyodide";
 
 function App() {
   const [creditScore, setCreditScore] = useState('');
