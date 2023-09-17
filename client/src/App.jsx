@@ -10,6 +10,8 @@ function App() {
   const [ccFirst, setCCFirst] = useState('');
   const [maxFees, setMaxFees] = useState('');
   const [features, setFeatures] = useState('');
+  const [creditcard, setCreditCard] = useState('');
+
 
   // visbility
   const [creditScoreVisible, setCreditScoreVisible] = useState(true);
@@ -17,6 +19,7 @@ function App() {
   const [ccFirstVisible, setCCFirstVisible] = useState(false);
   const [maxFeesVisible, setMaxFeesVisible] = useState(false);
   const [featuresVisible, setFeaturesVisible] = useState(false);
+  const [creditCardVisible, setCreditCardVisible] = useState(false);
 
   const handleChange = (e) => {
     setCreditScore(e.target.value);
@@ -60,32 +63,29 @@ function App() {
     console.log('features Saved', features);
   }
 
+
+
   const handleDeleteCreditScore = () => {
-    setCreditScore('');
     setCreditScoreVisible(false);
     setIncomeVisible(true);
   }
 
   const handleDeleteIncome = () => {
-    setIncome('');
     setIncomeVisible(false);
     setCCFirstVisible(true);
   }
 
   const handleDeleteCCFirst = () => {
-    setCCFirst('');
     setCCFirstVisible(false);
     setMaxFeesVisible(true);
   }
   
   const handleDeleteMaxFees = () => {
-    setMaxFees('');
     setMaxFeesVisible(false);
     setFeaturesVisible(true);
   }
 
   const handleDeleteFeatures = () => {
-    setFeatures('');
     setFeaturesVisible(false);
     const a = CreditCard(670, "Chase Freedom Unlimited", 0, "Travel");
     const b = CreditCard(670, "Discover it Cash Back", 0, "Dining");
@@ -97,35 +97,42 @@ function App() {
     const h = CreditCard(670, "Hilton Honors American Express Card", 0, "Groceries");
     const i = CreditCard(670, "Hilton Honors American Express Card", 0, "Gas");
     const j = CreditCard(740, "Costco Anywhere Card", 0, "Gas");
+    
 
-    if(creditScore < 300){
-      console.log("You only qualify for the Bank Americard Secure Credit Card");
-    }else if(creditScore < 580){
-      console.log("You qualify for the Capital One Platinum Secured Cash Rewards Credit Card, enjoy the cash back!");
+    if(creditScore < 300 || ccFirst == "Yes"){
+      setCreditCard("You only qualify for the Bank Americard Secure Credit Card");
+    }else if(creditScore < 580 || income == 0){
+      setCreditCard("You qualify for the Capital One Platinum Secured Cash Rewards Credit Card, enjoy the cash back!");
     }else if(creditScore < 670){
       if(features == "Groceries"){
-        console.log("You qualify for the Citi Double Cash Card, enjoy the cash back!");
+        setCreditCard("You qualify for the Citi Double Cash Card, enjoy the cash back!");
       }else if(features == "Gas"){
-        console.log("You qualify for the Discover it Student Chrome, enjoy the cash back!")
+        setCreditCard("You qualify for the Discover it Student Chrome, enjoy the cash back!")
       }else{
-        console.log("You qualify for the Capital One Quicksilver Cash Rewards, enjoy the cash back!");
+        setCreditCard("You qualify for the Capital One Quicksilver Cash Rewards, enjoy the cash back!");
       }
     }else if(features == "Travel"){
-      console.log("You qualify for the Chase Freedom Unlimited, enjoy the miles!");
+      setCreditCard("You qualify for the Chase Freedom Unlimited, enjoy the miles!");
     }
     else if(features == "Dining"){
-      console.log("You qualify for the Discover it Cash Back, enjoy the cash back!");
+      setCreditCard("You qualify for the Discover it Cash Back, enjoy the cash back!");
     }else if(creditScore> 670 && features == "Gas"){
-      console.log("You qualify for the Costco Anywhere Card, enjoy the cash back!");
+      setCreditCard("You qualify for the Costco Anywhere Card, enjoy the cash back!");
     }else{
-      console.log("You qualify for the Hilton Honors American Express Card, enjoy the cash back!");
+      setCreditCard("You qualify for the Hilton Honors American Express Card, enjoy the cash back!");
     }
+    setCreditCardVisible(true);
+  }
+  
+  const handleDeleteCreditCard = () => {
+    setCreditCardVisible(false);
+    setCreditScoreVisible(true);
   }
 
   return (
     <>
     <Navbar />
-      <h1> Credit Card Picker </h1>
+      <h1> Credit Card Matcher </h1>
         {creditScoreVisible && (
           <div>
             <p className="cscoreq"> What is your credit score? </p>
@@ -219,6 +226,20 @@ function App() {
 
       <p className = "featuresA "> These are the features you selected: {features} </p> 
       </div>
+    )}
+    {creditCardVisible && (
+    <div> 
+       <input
+              className = "cctextbox"
+              type="textarea"
+              name="creditcard"
+              id="creditcard"
+              readOnly = {true}
+              value={creditcard}
+            />
+        < button className = "creditcard-delete-btn" onClick={handleDeleteCreditCard}> Delete </button>
+
+    </div>
     )}
     </>
 

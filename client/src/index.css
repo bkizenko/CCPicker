@@ -45,7 +45,9 @@ h1 {
   font-family: 'Oxanium', cursive;
   font-size: 3.2em;
   line-height: 1.1;
-  position: absolute;
+  position: fixed;
+  align-items: center;
+  justify-content: center;
   top: 5%;
   left: 15%;
 }
@@ -314,3 +316,21 @@ button:focus-visible {
   left: 65%;
 }
 
+.cctextbox {
+  position: absolute;
+  width: 50%;
+  min-width: 400px;
+  top: 25%;
+  left: 30%;
+}
+.final {
+  position: absolute;
+  top: 28%;
+  left: 30%;
+}
+
+.creditcard-delete-btn {
+  position: absolute;
+  top: 24%;
+  left: 90%;
+}
