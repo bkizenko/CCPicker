@@ -87,26 +87,37 @@ function App() {
     setFeatures('');
     setFeaturesVisible(false);
     const a = CreditCard(670, "Chase Freedom Unlimited", 0, "Travel");
-    const b = CreditCard(670, "Discover it Cash Back", 0, "Everyday");
-    const c = CreditCard(580, "Discover it Student Cash Back", 0, "Groceries");
-    const d = CreditCard(580, "Capital One Quicksilver Cash Rewards", 39, "Everyday");
-    const e = CreditCard(300, "Capital One Platinum Secured Cash Rewards Credit Card", 0, "Everyday");
-    const f = CreditCard(0, "Bank Americard Secure Credit Card", 0, "Everyday");
+    const b = CreditCard(670, "Discover it Cash Back", 0, "Dining");
+    const c = CreditCard(580, "Citi Double Cash Card", 0, "Groceries");
+    const d = CreditCard(580, "Capital One Quicksilver Cash Rewards", 39, "Dining");
+    const e = CreditCard(300, "Capital One Platinum Secured Cash Rewards Credit Card", 0, "Groceries");
+    const f = CreditCard(0, "Bank Americard Secure Credit Card", 0, "Groceries");
+    const g = CreditCard(580, "Discover it Student Chrome", 0, "Gas");
+    const h = CreditCard(670, "Hilton Honors American Express Card", 0, "Groceries");
+    const i = CreditCard(670, "Hilton Honors American Express Card", 0, "Gas");
+    const j = CreditCard(740, "Costco Anywhere Card", 0, "Gas");
+
     if(creditScore < 300){
       console.log("You only qualify for the Bank Americard Secure Credit Card");
     }else if(creditScore < 580){
       console.log("You qualify for the Capital One Platinum Secured Cash Rewards Credit Card, enjoy the cash back!");
     }else if(creditScore < 670){
       if(features == "Groceries"){
-        console.log("You qualify for the Discover it Student Cash Back, enjoy the cash back!");
+        console.log("You qualify for the Citi Double Cash Card, enjoy the cash back!");
+      }else if(features == "Gas"){
+        console.log("You qualify for the Discover it Student Chrome, enjoy the cash back!")
       }else{
         console.log("You qualify for the Capital One Quicksilver Cash Rewards, enjoy the cash back!");
       }
     }else if(features == "Travel"){
       console.log("You qualify for the Chase Freedom Unlimited, enjoy the miles!");
     }
-    else{
+    else if(features == "Dining"){
       console.log("You qualify for the Discover it Cash Back, enjoy the cash back!");
+    }else if(creditScore> 670 && features == "Gas"){
+      console.log("You qualify for the Costco Anywhere Card, enjoy the cash back!");
+    }else{
+      console.log("You qualify for the Hilton Honors American Express Card, enjoy the cash back!");
     }
   }
 
@@ -199,7 +210,6 @@ function App() {
           <option value="gas">Gas</option>
           <option value="groceries">Groceries</option>
           <option value="dining">Dining</option>
-          <option value="shopping">Shopping</option>
 
           </select>
       < button className = "features-btn" onClick = {saveFeatures}> Save </button>
