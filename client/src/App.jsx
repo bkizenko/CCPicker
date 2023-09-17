@@ -161,7 +161,7 @@ function App() {
           value={ccFirst}
         />
       < button className = "ccfirstbtn" onClick = {saveccFirst}> Save </button>
-      < button className = "ccfirst-delete-btn" onClick={handleDeleteCCFirst}> Delete </button>
+      <button className = "ccfirst-delete-btn" onClick={handleDeleteCCFirst}> Delete </button>
       </div>
       <p className = "ccFirstanswer">This if your first CC: {ccFirst}  </p> 
     </div>
