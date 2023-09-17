@@ -70,7 +70,6 @@ function App() {
     setCreditScore('');
     setCreditScoreVisible(false);
     setIncomeVisible(true);
-
   }
 
   const handleDeleteIncome = () => {
@@ -101,7 +100,6 @@ function App() {
     e = CreditCard(300, "Capital One Quicksilver Secured Cash Rewards Credit Card", 0, "Everyday");
     f = CreditCard(0, "Bank Americard Secure Credit Card", 0, "Everyday");
   }
-
 
   return (
     <>
@@ -136,7 +134,7 @@ function App() {
           onChange={handleChange2}
           value={income}
         /> 
-        < button className = "income-btn" onClick = {saveIncome}> Save </button>
+        <button className = "income-btn" onClick = {saveIncome}> Save </button>
         <button className = "income-delete-btn" onClick={handleDeleteIncome}> Delete </button>
         <div className="incomeAnswer">
          Your income  is: {income}
@@ -193,7 +191,6 @@ function App() {
           <option value="gas">Gas</option>
           <option value="groceries">Groceries</option>
           <option value="dining">Dining</option>
-          <option value="shopping">Shopping</option>
 
           </select>
       < button className = "features-btn" onClick = {saveFeatures}> Save </button>
