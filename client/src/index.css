@@ -123,14 +123,14 @@ h1 {
 .cscore-delete-btn {
   position: absolute;
   top: 24%;
-  left: 65%;
+  left: 47%;
 }
 
 /* save buttton score */
 .cscore-btn {
   position: absolute;
   top: 24%;
-  left: 53%;
+  left: 41%;
 }
 
 /* Button */
@@ -189,14 +189,14 @@ button:focus-visible {
 .income-btn {
   position: absolute;
   top: 24%;
-  left: 53%;
+  left: 41%;
 }
 
 /* income delete btn */
 .income-delete-btn {
   position: absolute;
   top: 24%;
-  left: 65%;
+  left: 47%;
 }
 
 /* Income answer */
@@ -267,14 +267,14 @@ button:focus-visible {
 .maxfees-btn {
   position: absolute;
   top: 24%;
-  left: 53%;
+  left: 41%;
 }
 
 /* Max fees delete button */
 .fees-delete-btn {
   position: absolute;
   top: 24%;
-  left: 65%;
+  left: 47%;
 }
 
 /* Features Question */
@@ -306,14 +306,14 @@ button:focus-visible {
 .features-btn {
   position: absolute;
   top: 24%;
-  left: 53%;
+  left: 41%;
 }
 
 /*  features delete button */
 .features-delete-btn {
   position: absolute;
   top: 24%;
-  left: 65%;
+  left: 47%;
 }
 
 .cctextbox {
@@ -331,6 +331,6 @@ button:focus-visible {
 
 .creditcard-delete-btn {
   position: absolute;
-  top: 24%;
-  left: 90%;
+  top: 28%;
+  left: 45%;
 }

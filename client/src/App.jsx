@@ -145,7 +145,7 @@ function App() {
               value={creditScore}
             />
             < button className = "cscore-btn" onClick = {saveCreditScore}> Save </button>
-            <button className = "cscore-delete-btn" onClick={handleDeleteCreditScore}> Delete </button>
+            <button className = "cscore-delete-btn" onClick={handleDeleteCreditScore}> Next </button>
             <div className="cscorea">
         Your credit score is: {creditScore}
       </div>  
@@ -163,7 +163,7 @@ function App() {
           value={income}
         /> 
         <button className = "income-btn" onClick = {saveIncome}> Save </button>
-        <button className = "income-delete-btn" onClick={handleDeleteIncome}> Delete </button>
+        <button className = "income-delete-btn" onClick={handleDeleteIncome}> Next </button>
         <div className="incomeAnswer">
          Your income  is: {income}
         </div>
@@ -181,7 +181,7 @@ function App() {
           value={ccFirst}
         />
       < button className = "ccfirstbtn" onClick = {saveccFirst}> Save </button>
-      <button className = "ccfirst-delete-btn" onClick={handleDeleteCCFirst}> Delete </button>
+      <button className = "ccfirst-delete-btn" onClick={handleDeleteCCFirst}> Next </button>
       </div>
       <p className = "ccFirstanswer">This if your first CC: {ccFirst}  </p> 
     </div>
@@ -199,7 +199,7 @@ function App() {
           value={maxFees}
       />
       < button className = "maxfees-btn" onClick = {savemaxFees}> Save </button>
-      < button className = "fees-delete-btn" onClick={handleDeleteMaxFees}> Delete </button>
+      < button className = "fees-delete-btn" onClick={handleDeleteMaxFees}> Next </button>
       <p className = "feesA "> This is the max amount you can spend on fees: {maxFees}  </p> 
 
     </div>
@@ -222,7 +222,7 @@ function App() {
 
           </select>
       < button className = "features-btn" onClick = {saveFeatures}> Save </button>
-      < button className = "features-delete-btn" onClick={handleDeleteFeatures}> Delete </button>
+      < button className = "features-delete-btn" onClick={handleDeleteFeatures}> Next </button>
 
       <p className = "featuresA "> These are the features you selected: {features} </p> 
       </div>
@@ -237,7 +237,7 @@ function App() {
               readOnly = {true}
               value={creditcard}
             />
-        < button className = "creditcard-delete-btn" onClick={handleDeleteCreditCard}> Delete </button>
+        < button className = "creditcard-delete-btn" onClick={handleDeleteCreditCard}> Reset </button>
 
     </div>
     )}
