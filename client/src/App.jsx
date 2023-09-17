@@ -125,6 +125,12 @@ function App() {
   }
   
   const handleDeleteCreditCard = () => {
+    setCreditScore('');
+    setIncome('');
+    setCCFirst('');
+    setMaxFees('');
+    setFeatures('');
+    setCreditCard('');
     setCreditCardVisible(false);
     setCreditScoreVisible(true);
   }
