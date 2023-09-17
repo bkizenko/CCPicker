@@ -33,6 +33,7 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  background-color: #d1b8b8;
 }
 
 /* Headings */
@@ -40,45 +41,54 @@ h1 {
   font-size: 3.2em;
   line-height: 1.1;
   position: absolute;
-  top: 15%;
+  top: 5%;
   left: 15%;
+  color: #000000;
 }
 
 /* Credit score question */
 .cscoreq {
   position: absolute;
-  top: 35%;
+  top: 17%;
   left: 30%;
 }
 
 .cscoretextbox {
   position: absolute;
-  top: 45%;
+  top: 25%;
   left: 30%;
 }
 
 /* Credit score answer */
 .cscorea {
   position: absolute;
-  top: 48%;
+  top: 28%;
   left: 30%;
 }
 
+/* Credit Score Delete */
+.cscore-delete-btn {
+  position: absolute;
+  top: 24%;
+  left: 65%;
+}
+
+/* save buttton score */
 .cscore-btn {
   position: absolute;
-  top: 44%;
+  top: 24%;
   left: 53%;
 }
 
 /* Button */
 button {
-  border-radius: 8px;
-  border: 1px solid transparent;
+  border-radius: 15px;
+  border: px solid transparent;
   padding: 0.6em 1.2em;
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: #924f4f;
   cursor: pointer;
   transition: border-color 0.25s;
 }
@@ -95,7 +105,7 @@ button:focus-visible {
 /* Light theme */
 @media (prefers-color-scheme: light) {
   :root {
-    color: #213547;
+    color: #5e768b;
     background-color: #ffffff;
   }
 
@@ -110,49 +120,144 @@ button:focus-visible {
 /* Income question */
 .incomeq {
   position: absolute;
-  top: 51%;
+  top: 17%;
   left: 30%;
 }
 
 /* Income textbox */
 .incometextbox {
   position: absolute;
-  top: 60%;
+  top: 25%;
   left: 30%;
 }
 
+/* income save btn */
 .income-btn {
   position: absolute;
-  top: 59%;
+  top: 24%;
   left: 53%;
+}
+
+/* income delete btn */
+.income-delete-btn {
+  position: absolute;
+  top: 24%;
+  left: 65%;
 }
 
 /* Income answer */
 .incomeAnswer {
   position: absolute;
-  top: 64%;
+  top: 28%;
   left: 30%;
 }
-
-
 
 /* First credit card question */
 .ccfirstq {
   position: absolute;
-  top: 70%;
+  top: 17%;
   left: 30%;
 }
 
-/* First credit card answer */
+/* First credit card answer, textbox */
 .ccfirsta {
   position: absolute;
-  top: 75%;
+  top: 23%;
   left: 30%;
+}
+
+/* first credit card save button */
+.ccfirstbtn {
+  position: absolute;
+  top: -35%;
+  left: 110%;
+}
+
+/* first credit card delete button */
+.ccfirst-delete-btn {
+  position: absolute;
+  top: -35%;
+  left: 165%;
 }
 
 /* First credit card answer */
 .ccFirstanswer {
   position: absolute;
-  top: 78%;
+  top: 28%;
   left: 30%;
+}
+
+/* Fees limit Question */
+.feesQ {
+  position: absolute;
+  top: 17%;
+  left: 30%;
+}
+
+/* Fees Limit textbox */
+.feestextbox {
+  position: absolute;
+  top: 25%;
+  left: 30%;
+}
+
+/* Fees Limit Answer */
+
+.feesA {
+  position: absolute;
+  top: 28%;
+  left: 30%;
+}
+
+/* Max fees save button */
+.maxfees-btn {
+  position: absolute;
+  top: 24%;
+  left: 53%;
+}
+
+/* Max fees delete button */
+.fees-delete-btn {
+  position: absolute;
+  top: 24%;
+  left: 65%;
+}
+
+/* Features Question */
+.featuresQ {
+  position: absolute;
+  top: 17%;
+  left: 30%;
+}
+
+/* Features options */
+.featuresoptions {
+  position: absolute;
+  top: 25%;
+  left: 30%;
+  width: 150px;
+  height: 25px;
+  
+}
+
+/* Features Answer */ 
+.featuresA {
+  position: absolute;
+  top: 28%;
+  left: 30%;
+  
+}
+
+/*  features save button */
+.features-btn {
+  position: absolute;
+  top: 24%;
+  left: 53%;
+}
+
+/*  features delete button */
+.features-delete-btn {
+  position: absolute;
+  top: 24%;
+  left: 65%;
 }
