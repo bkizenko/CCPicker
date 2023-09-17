@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Navbar from './Navbar.jsx';
 const CreditCard = (minCredit, name, fees, feature) => {
   return { minCredit, name, fees, feature };
 };
@@ -123,6 +124,7 @@ function App() {
 
   return (
     <>
+    <Navbar />
       <h1> Credit Card Picker </h1>
         {creditScoreVisible && (
           <div>
