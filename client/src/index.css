@@ -1,12 +1,12 @@
 /* Global styles */
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: Inter, system-ui, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color: #F62D55; /* This is your desired text color */
+  background-color: rgb(255, 255, 255);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -43,7 +43,6 @@ h1 {
   position: absolute;
   top: 5%;
   left: 15%;
-  color: #000000;
 }
 
 /* Credit score question */
@@ -88,9 +87,10 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #924f4f;
+  background-color: #F62D55;
   cursor: pointer;
   transition: border-color 0.25s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
 }
 
 button:hover {
@@ -162,7 +162,7 @@ button:focus-visible {
 /* First credit card answer, textbox */
 .ccfirsta {
   position: absolute;
-  top: 23%;
+  top: 24%;
   left: 30%;
 }
 
