@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import Navbar from './Navbar.jsx';
+
 const CreditCard = function(minCredit, name,fees,feature) {
   this.minCredit = minCredit;
   this.name = name;
@@ -21,6 +23,7 @@ function App() {
   const [maxFeesVisible, setMaxFeesVisible] = useState(false);
   const [featuresVisible, setFeaturesVisible] = useState(false);
 
+  
   const handleChange = (e) => {
     setCreditScore(e.target.value);
   }; 
@@ -99,9 +102,11 @@ function App() {
     f = CreditCard(0, "Bank Americard Secure Credit Card", 0, "Everyday");
   }
 
+
   return (
     <>
-      <h1> Credit Card Picker </h1>
+      <Navbar />
+      <h1> Credit Card Matcher </h1>
         {creditScoreVisible && (
           <div>
             <p className="cscoreq"> What is your credit score? </p>
