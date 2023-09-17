@@ -1,4 +1,11 @@
 import React, { useState } from 'react';
+const CreditCard = function(minCredit, name,fees,feature) {
+  this.minCredit = minCredit;
+  this.name = name;
+  this.fees = fees;
+  this.feature = feature;
+  return {minCredit, name, fees, feature};
+};
 
 function App() {
   const [creditScore, setCreditScore] = useState('');
@@ -13,7 +20,6 @@ function App() {
   const [ccFirstVisible, setCCFirstVisible] = useState(false);
   const [maxFeesVisible, setMaxFeesVisible] = useState(false);
   const [featuresVisible, setFeaturesVisible] = useState(false);
-
 
   const handleChange = (e) => {
     setCreditScore(e.target.value);
@@ -85,6 +91,12 @@ function App() {
   const handleDeleteFeatures = () => {
     setFeatures('');
     setFeaturesVisible(false);
+    a = CreditCard(670, "Chase Freedom Unlimited", 0, "Travel");
+    b = CreditCard(670, "Discover it Cash Back", 0, "Everyday");
+    c = CreditCard(580, "Discover it Student Cash Back", 0, "Student");
+    d = CreditCard(580, "Capital One Quicksilver Cash Rewards", 39, "Everyday");
+    e = CreditCard(300, "Capital One Quicksilver Secured Cash Rewards Credit Card", 0, "Everyday");
+    f = CreditCard(0, "Bank Americard Secure Credit Card", 0, "Everyday");
   }
 
   return (
