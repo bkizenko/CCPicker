@@ -115,7 +115,7 @@ h1 {
 /* Credit score answer */
 .cscorea {
   position: absolute;
-  top: 28%;
+  top: 30%;
   left: 30%;
 }
 
@@ -202,7 +202,7 @@ button:focus-visible {
 /* Income answer */
 .incomeAnswer {
   position: absolute;
-  top: 28%;
+  top: 30%;
   left: 30%;
 }
 
