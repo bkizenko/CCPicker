@@ -1,12 +1,6 @@
 import React, { useState } from 'react';
-import Navbar from './Navbar.jsx';
-
-const CreditCard = function(minCredit, name,fees,feature) {
-  this.minCredit = minCredit;
-  this.name = name;
-  this.fees = fees;
-  this.feature = feature;
-  return {minCredit, name, fees, feature};
+const CreditCard = (minCredit, name, fees, feature) => {
+  return { minCredit, name, fees, feature };
 };
 
 function App() {
@@ -23,7 +17,6 @@ function App() {
   const [maxFeesVisible, setMaxFeesVisible] = useState(false);
   const [featuresVisible, setFeaturesVisible] = useState(false);
 
-  
   const handleChange = (e) => {
     setCreditScore(e.target.value);
   }; 
@@ -93,18 +86,44 @@ function App() {
   const handleDeleteFeatures = () => {
     setFeatures('');
     setFeaturesVisible(false);
-    a = CreditCard(670, "Chase Freedom Unlimited", 0, "Travel");
-    b = CreditCard(670, "Discover it Cash Back", 0, "Everyday");
-    c = CreditCard(580, "Discover it Student Cash Back", 0, "Student");
-    d = CreditCard(580, "Capital One Quicksilver Cash Rewards", 39, "Everyday");
-    e = CreditCard(300, "Capital One Quicksilver Secured Cash Rewards Credit Card", 0, "Everyday");
-    f = CreditCard(0, "Bank Americard Secure Credit Card", 0, "Everyday");
+    const a = CreditCard(670, "Chase Freedom Unlimited", 0, "Travel");
+    const b = CreditCard(670, "Discover it Cash Back", 0, "Dining");
+    const c = CreditCard(580, "Citi Double Cash Card", 0, "Groceries");
+    const d = CreditCard(580, "Capital One Quicksilver Cash Rewards", 39, "Dining");
+    const e = CreditCard(300, "Capital One Platinum Secured Cash Rewards Credit Card", 0, "Groceries");
+    const f = CreditCard(0, "Bank Americard Secure Credit Card", 0, "Groceries");
+    const g = CreditCard(580, "Discover it Student Chrome", 0, "Gas");
+    const h = CreditCard(670, "Hilton Honors American Express Card", 0, "Groceries");
+    const i = CreditCard(670, "Hilton Honors American Express Card", 0, "Gas");
+    const j = CreditCard(740, "Costco Anywhere Card", 0, "Gas");
+
+    if(creditScore < 300){
+      console.log("You only qualify for the Bank Americard Secure Credit Card");
+    }else if(creditScore < 580){
+      console.log("You qualify for the Capital One Platinum Secured Cash Rewards Credit Card, enjoy the cash back!");
+    }else if(creditScore < 670){
+      if(features == "Groceries"){
+        console.log("You qualify for the Citi Double Cash Card, enjoy the cash back!");
+      }else if(features == "Gas"){
+        console.log("You qualify for the Discover it Student Chrome, enjoy the cash back!")
+      }else{
+        console.log("You qualify for the Capital One Quicksilver Cash Rewards, enjoy the cash back!");
+      }
+    }else if(features == "Travel"){
+      console.log("You qualify for the Chase Freedom Unlimited, enjoy the miles!");
+    }
+    else if(features == "Dining"){
+      console.log("You qualify for the Discover it Cash Back, enjoy the cash back!");
+    }else if(creditScore> 670 && features == "Gas"){
+      console.log("You qualify for the Costco Anywhere Card, enjoy the cash back!");
+    }else{
+      console.log("You qualify for the Hilton Honors American Express Card, enjoy the cash back!");
+    }
   }
 
   return (
     <>
-      <Navbar />
-      <h1> Credit Card Matcher </h1>
+      <h1> Credit Card Picker </h1>
         {creditScoreVisible && (
           <div>
             <p className="cscoreq"> What is your credit score? </p>
