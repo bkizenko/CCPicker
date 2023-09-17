@@ -1,10 +1,6 @@
 import React, { useState } from 'react';
-const CreditCard = function(minCredit, name,fees,feature) {
-  this.minCredit = minCredit;
-  this.name = name;
-  this.fees = fees;
-  this.feature = feature;
-  return {minCredit, name, fees, feature};
+const CreditCard = (minCredit, name, fees, feature) => {
+  return { minCredit, name, fees, feature };
 };
 
 function App() {
@@ -67,7 +63,6 @@ function App() {
     setCreditScore('');
     setCreditScoreVisible(false);
     setIncomeVisible(true);
-
   }
 
   const handleDeleteIncome = () => {
@@ -91,12 +86,28 @@ function App() {
   const handleDeleteFeatures = () => {
     setFeatures('');
     setFeaturesVisible(false);
-    a = CreditCard(670, "Chase Freedom Unlimited", 0, "Travel");
-    b = CreditCard(670, "Discover it Cash Back", 0, "Everyday");
-    c = CreditCard(580, "Discover it Student Cash Back", 0, "Student");
-    d = CreditCard(580, "Capital One Quicksilver Cash Rewards", 39, "Everyday");
-    e = CreditCard(300, "Capital One Quicksilver Secured Cash Rewards Credit Card", 0, "Everyday");
-    f = CreditCard(0, "Bank Americard Secure Credit Card", 0, "Everyday");
+    const a = CreditCard(670, "Chase Freedom Unlimited", 0, "Travel");
+    const b = CreditCard(670, "Discover it Cash Back", 0, "Everyday");
+    const c = CreditCard(580, "Discover it Student Cash Back", 0, "Groceries");
+    const d = CreditCard(580, "Capital One Quicksilver Cash Rewards", 39, "Everyday");
+    const e = CreditCard(300, "Capital One Platinum Secured Cash Rewards Credit Card", 0, "Everyday");
+    const f = CreditCard(0, "Bank Americard Secure Credit Card", 0, "Everyday");
+    if(creditScore < 300){
+      console.log("You only qualify for the Bank Americard Secure Credit Card");
+    }else if(creditScore < 580){
+      console.log("You qualify for the Capital One Platinum Secured Cash Rewards Credit Card, enjoy the cash back!");
+    }else if(creditScore < 670){
+      if(features == "Groceries"){
+        console.log("You qualify for the Discover it Student Cash Back, enjoy the cash back!");
+      }else{
+        console.log("You qualify for the Capital One Quicksilver Cash Rewards, enjoy the cash back!");
+      }
+    }else if(features == "Travel"){
+      console.log("You qualify for the Chase Freedom Unlimited, enjoy the miles!");
+    }
+    else{
+      console.log("You qualify for the Discover it Cash Back, enjoy the cash back!");
+    }
   }
 
   return (
@@ -131,7 +142,7 @@ function App() {
           onChange={handleChange2}
           value={income}
         /> 
-        < button className = "income-btn" onClick = {saveIncome}> Save </button>
+        <button className = "income-btn" onClick = {saveIncome}> Save </button>
         <button className = "income-delete-btn" onClick={handleDeleteIncome}> Delete </button>
         <div className="incomeAnswer">
          Your income  is: {income}
